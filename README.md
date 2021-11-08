@@ -10,3 +10,7 @@ So, in order to solve these problems, I decided to create a data and exam schedu
 * aws s3
 
 I used aws s3 to save my meterials. Since I am not going to do a large service, I used s3 which is 50 won per 1GB.
+
+* Django
+
+Framework
