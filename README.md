@@ -6,6 +6,11 @@ So, in order to solve these problems, I decided to create a data and exam schedu
 
 ![Preview Img](https://raw.githubusercontent.com/seohayeon/study-cloud/main/resources/preview1.jpg)
 
+## Function
+* Store and manage files
+* Register and notify schedules such as performance evaluation and exams
+* Take notes and save data-related content
+
 ## Tools i used
 * aws s3
 
