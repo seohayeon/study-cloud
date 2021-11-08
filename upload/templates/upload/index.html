@@ -1,0 +1,29 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+
+<form action="{% url 'file:upload' %}" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+<input type="text" 
+       name="title"
+       class="form-control" 
+       style='display:block;'/>
+<select name="category" class="form-select">
+    
+    <option value="">과목</option>
+    {% for i in category%}
+      <option value='{{i}}'>{{i}}</option>
+{% endfor %} 
+
+</select>
+<input class="form-control" 
+       name="file"
+       type="file"
+       multiple/>
+       
+<textarea class="form-control" 
+          style='display:block;' 
+          name="desc"
+          rows="10"></textarea>
+
+<button class='btn btn-primary' type="submit">submit</button>
+</form>

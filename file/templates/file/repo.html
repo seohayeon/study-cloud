@@ -1,0 +1,8 @@
+{% for i in data%}
+   <div class="block">
+      <div>{{i.category}}</div>
+      <div>{{i.title}}</div>
+      <div>{{i.content}}</div>
+      <a href="https://simi-cloud.s3.us-east-2.amazonaws.com/{{i.file}}">{{i.file}}</a>
+      </div>
+{% endfor %} 

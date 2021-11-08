@@ -1,0 +1,22 @@
+.block{
+    border-top:0.1rem solid #d2d2d2;
+    
+}
+.folder{
+    display:inline-block;
+    no-repeat 0 0;
+    background-size:100% 100%;
+    width:10rem;
+    height:7rem;
+    margin:1rem;
+    background-image: url(/static/img/folder_gray.png);
+    padding-left: 0.8rem;
+}
+.folder:hover{
+    background-image: url(/static/img/folder_blue.png);
+    color:white;
+}
+#extension_icon{
+    width: 1.5rem;
+    height: 1.5rem;
+}

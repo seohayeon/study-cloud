@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}"/>
+
+</head>
+    <body>
+    {% for i in category%}
+   <div class="folder" 
+        onClick="location.href='/file/category/{{i.name}}'">
+     {{i.name}}
+      </div>
+{% endfor %} 
+
+   {% for i in data%}
+   <div class="block">
+       <img src='/static/icon/{{i.extension}}.png' 
+            id="extension_icon"/>
+      <a href="/file/{{i.id}}">{{i.title}}</a>
+      </div>
+{% endfor %} 
+</body>
+</html>
