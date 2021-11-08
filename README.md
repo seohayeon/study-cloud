@@ -5,3 +5,8 @@ So, in order to solve these problems, I decided to create a data and exam schedu
 
 
 ![Preview Img](https://raw.githubusercontent.com/seohayeon/study-cloud/main/resources/preview1.jpg)
+
+## Tools i used
+* aws s3
+
+I used aws s3 to save my meterials. Since I am not going to do a large service, I used s3 which is 50 won per 1GB.
