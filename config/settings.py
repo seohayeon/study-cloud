@@ -138,7 +138,3 @@ STATICFILES_DIRS = ( os.path.join('static'), )
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-#aws EC2
-AWS_ACCESS_KEY_ID = 'AKIA6IZXB5XQUEBE736F'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_STORAGE_BUCKET_NAME = 'simi-cloud'
