@@ -6,7 +6,8 @@ from secret import AWS_ACCESS_KEY_ID,AWS_SECRET_ACCESS_KEY,AWS_STORAGE_BUCKET_NA
 from datetime import datetime
 from file.models import Data,Category
 import os
-
+from icon_info import ICON_CONFIG
+from django.utils.safestring import SafeString
 
 def index(request):
     template = loader.get_template('file/index.html')
@@ -46,10 +47,13 @@ def upload(request):
             
 def category(request,category):
     template = loader.get_template('file/repo.html')
-    context = {'data':Data.objects.filter(category=category)}
+    
+    context = {'data':Data.objects.filter(category=category),'icon':ICON_CONFIG}
     return HttpResponse(template.render(context, request))
     
 def info(request,id):
     template = loader.get_template('file/info.html')
-    context = {'data':Data.objects.get(id=id)}
+    data=Data.objects.get(id=id)
+    #icon = json.loads(ICON_CONFIG)
+    context = {'data':data,'icon':ICON_CONFIG[data.extension]}
     return HttpResponse(template.render(context, request))
