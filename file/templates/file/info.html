@@ -1,11 +1,26 @@
-{{data.title}}
-{{data.content}}
-{{data.category}}
-{{data.created_at}}
-<a href="https://simi-cloud.s3.us-east-2.amazonaws.com/{{data.file}}.{{data.extension}}">
+{% load static %}
+  <script src="{% static 'js/marked.min.js' %}"></script>
+ <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}"/>
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}"/>
+
+
+<div class="info_block">
+<h2 class="info_category">
+   {{data.category}} 
+</h2>
+<h1 class="info_title">{{data.title}}</h1>
+
+<div class="info_attatchment">
+    <a href="https://simi-cloud.s3.us-east-2.amazonaws.com/{{data.file}}.{{data.extension}}">
     download
 </a>
+</div>
+<div id="info_content"></div>
+{{data.created_at}}
+</div>
 
-{{icon}}
-{{data.file}}
-{{data.extension}}
+
+<script>
+    document.getElementById('info_content').innerHTML =
+      marked.parse('{{data.content}}');
+  </script>

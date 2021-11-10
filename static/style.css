@@ -20,3 +20,19 @@
     width: 1.5rem;
     height: 1.5rem;
 }
+.file_block{
+    float:left;
+    display: inline-block;
+    margin: 0.5rem;
+    text-align: center;
+}
+.file_block > img{
+    width: 8rem;
+}
+.info_category{
+    font-size:1.8rem;
+    font-weight: 700;
+}
+.info_title{
+    font-weight: 700;
+}

@@ -1,6 +1,7 @@
 {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
 
+<link rel="stylesheet" href="{% static 'editormd/css/editormd.css' %}" />
 <form action="{% url 'file:upload' %}" method="post" enctype="multipart/form-data">
     {% csrf_token %}
 <input type="text" 
@@ -19,6 +20,7 @@
        name="file"
        type="file"
        multiple/>
+
        
 <textarea class="form-control" 
           style='display:block;' 
@@ -27,3 +29,4 @@
 
 <button class='btn btn-primary' type="submit">submit</button>
 </form>
+

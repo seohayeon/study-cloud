@@ -43,7 +43,9 @@ def upload(request):
             data.save()
             return redirect('/file/')
         else:
-            return JsonResponse({'message':'file_none'})
+            data = Data(title=form['title'],content=form['desc'],category=form['category'],file='Null',extension='txt')
+            data.save()
+            return redirect('/file/')
             
 def category(request,category):
     template = loader.get_template('file/repo.html')

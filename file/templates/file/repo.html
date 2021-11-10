@@ -1,11 +1,14 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}"/>
 {% load custom_tags %}
 
 {% for i in data%}
-   <div class="block">
-      <div>{{i.category}}</div>
-      <div>{{i.title}}</div>
-      <div>{{i.content}}</div>
-      <a href="https://simi-cloud.s3.us-east-2.amazonaws.com/{{i.file}}">{{i.file}}</a>
+   <div class="file_block" onClick="location.href='/file/{{i.id}}'">
+       
       <img src='/static/icon/{{icon | get_obj_attr:i.extension}}.png'/>
+      
+      <div>
+          {{i.title}}
+      </div>
       </div>
 {% endfor %} 
