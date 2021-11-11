@@ -11,16 +11,13 @@
 <h1 class="info_title">{{data.title}}</h1>
 
 <div class="info_attatchment">
+    {% if data.file != 'Null' %}
     <a href="https://simi-cloud.s3.us-east-2.amazonaws.com/{{data.file}}.{{data.extension}}">
     download
 </a>
+{% endif %}
 </div>
-<div id="info_content"></div>
+<div id="info_content">{{data.content | linebreaksbr}}</div>
 {{data.created_at}}
 </div>
 
-
-<script>
-    document.getElementById('info_content').innerHTML =
-      marked.parse('{{data.content}}');
-  </script>

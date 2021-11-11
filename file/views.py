@@ -57,5 +57,5 @@ def info(request,id):
     template = loader.get_template('file/info.html')
     data=Data.objects.get(id=id)
     #icon = json.loads(ICON_CONFIG)
-    context = {'data':data,'icon':ICON_CONFIG[data.extension]}
+    context = {'data':data}
     return HttpResponse(template.render(context, request))
