@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-w9)v7lr!5qg%#jjx$zifvmgt&8n%(uv1cbvt4#g20my$#8ejwf
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.1.20']
+ALLOWED_HOSTS = ['192.168.1.20','127.0.0.1']
 
 
 # Application definition
@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'upload',
     'file',
-    'storages',
 ]
 
 MIDDLEWARE = [
