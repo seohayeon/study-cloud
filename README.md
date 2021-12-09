@@ -4,8 +4,7 @@ Coming up to high school, I received a lot of prints and materials from school. 
 So, in order to solve these problems, I decided to create a data and exam schedule management cloud that was perfect for me.
 
 
-![Preview Img](https://raw.githubusercontent.com/seohayeon/study-cloud/main/resources/preview1.jpg)
-
+![Preview Img](https://raw.githubusercontent.com/seohayeon/study-cloud/main/resources/preview1.jpg?token=ATCVOVZ7VV6DZHM23AZYYQDBXNBK4)
 ## Function
 * Store and manage files
 * Register and notify schedules such as performance evaluation and exams
